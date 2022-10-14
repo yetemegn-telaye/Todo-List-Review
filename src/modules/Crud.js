@@ -12,7 +12,7 @@ const addTask = (inputVal, tasksArr) => {
   const taskObj = new Task(inputVal, false, tasksArr.length);
 
   tasksArr.push(taskObj);
- 
+
   localStorage.setItem('tasks', JSON.stringify(tasksArr));
   window.location.reload();
 };
