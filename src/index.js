@@ -4,11 +4,11 @@ import {
 } from './modules/Crud.js';
 import { checkBoxClicked, clearCompletedClicked } from './modules/taskStatusUpdate.js';
 
-let taskLists = [];
-const taskInput = document.querySelector('.add-task-input');
+
 
 const main = () => {
-  // localStorage.setItem('tasks',JSON.stringify([]));
+  let taskLists = [];
+const taskInput = document.querySelector('.add-task-input');
   if (localStorage.getItem('tasks') === null) {
     localStorage.setItem('tasks', JSON.stringify([]));
     taskLists = [];

@@ -10,10 +10,10 @@ class Task {
 
 const addTask = (inputVal, tasksArr) => {
   const taskObj = new Task(inputVal, false, tasksArr.length);
-  const localData = JSON.parse(localStorage.getItem('tasks'));
+
   tasksArr.push(taskObj);
-  localData.push(taskObj);
-  localStorage.setItem('tasks', JSON.stringify(localData));
+ 
+  localStorage.setItem('tasks', JSON.stringify(tasksArr));
   window.location.reload();
 };
 
